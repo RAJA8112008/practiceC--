@@ -1,14 +1,29 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 string ReverseWord(string &s){
+    //to store the words from word
     int n=s.length();
-    int i=0,j=n-1;
-    while(i<j){
-        swap(s[i],s[j]);
-        i++;
-        j--;
+   string word="";
+   //to store the 
+  vector<string>words;
+   for(int i=0;i<n-1;i++){
+    //remove the white space
+    if(s[i]==' '||s[i]=='.'){
+        if(!word.empty()){
+             words.push_back(word);
+             word="";
+        }
+    }else{
+        word+=s[i];
     }
-    return s;
+   }
+   if(!word.empty()){
+             words.push_back(word);
+             word="";
+        }
+        //reverse process
+        
 }
 int main(){
     string s;
