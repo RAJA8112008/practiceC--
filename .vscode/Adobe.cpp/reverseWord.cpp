@@ -23,7 +23,13 @@ string ReverseWord(string &s){
              word="";
         }
         //reverse process
-        
+        string ans="";
+        for(int j=words.size()-1;j>=0;j--){
+            ans+=words[j];
+            //adding dots
+            if(j!=0) ans+=".";
+        }
+        return ans;
 }
 int main(){
     string s;
